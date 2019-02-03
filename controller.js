@@ -22,7 +22,7 @@ module.exports = function(dot, opts) {
 
 function controller(prop, arg, dot) {
   dot.any(prop[0], function(p, a, d, e, s) {
-    p = p.concat([e.replace(/(Controller|Page)$/, "")])
+    p = p.concat([e.replace(/[A-Z][a-z]*$/, "")])
     return arg.call(null, p, a, d, e, s)
   })
 }
