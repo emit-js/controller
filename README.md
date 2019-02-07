@@ -26,10 +26,10 @@ export default function(dot) {
   if (dot.myController) {
     return
   }
-  dot.controller("myController", { render, update })
+  dot.controller("myController", myController)
 }
 
-function myController() {
+async function myController() {
   // control stuff
 }
 ```
@@ -38,7 +38,6 @@ Then use it:
 
 ```js
 require("./myController").default(dot)
-
 dot.myController()
 ```
 
