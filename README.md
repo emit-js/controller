@@ -1,6 +1,6 @@
 # @dot-event/controller
 
-dot-event dom controllers
+[dot-event](https://github.com/dot-event/dot-event2#readme) dom controllers
 
 ![controller](controller.gif)
 
