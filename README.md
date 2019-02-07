@@ -50,6 +50,8 @@ Passing those props down produces descriptive element ids and [logs](https://git
 
 Luckily, the `controller` composer injects the controller name into [the `prop` array](https://github.com/dot-event/dot-event2#props) automatically, eliminating the controller name append step.
 
+> ℹ️ Prop injection is the only thing the controller composer does at this point in time.
+
 ## Related composers
 
 | Library | Description        | URL                                        |
