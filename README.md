@@ -1,6 +1,6 @@
 # @dot-event/controller
 
-[dot-event](https://github.com/dot-event/dot-event2#readme) dom controllers
+[dot-event](https://github.com/dot-event/dot-event#readme) dom controllers
 
 ![controller](controller.gif)
 
@@ -40,11 +40,11 @@ dot.myController()
 
 ## Props
 
-Commonly we append the controller name to [the `prop` array](https://github.com/dot-event/dot-event2#props) and pass the concatenated props to sub-events.
+Commonly we append the controller name to [the `prop` array](https://github.com/dot-event/dot-event#props) and pass the concatenated props to sub-events.
 
-Passing those props down produces descriptive element ids and [logs](https://github.com/dot-event/log2) that describe the call stack.
+Passing those props down produces descriptive element ids and [logs](https://github.com/dot-event/log) that describe the call stack.
 
-Luckily, the `controller` composer injects the controller name into [the `prop` array](https://github.com/dot-event/dot-event2#props) automatically, eliminating the controller name append step.
+Luckily, the `controller` composer injects the controller name into [the `prop` array](https://github.com/dot-event/dot-event#props) automatically, eliminating the controller name append step.
 
 > ℹ️ Prop injection is the only thing the controller composer does at this point in time.
 
