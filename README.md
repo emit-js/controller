@@ -23,9 +23,6 @@ First create your controller composer:
 
 ```js
 export default function(dot) {
-  if (dot.myController) {
-    return
-  }
   dot.controller("myController", myController)
 }
 
