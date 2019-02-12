@@ -22,7 +22,7 @@ require("@dot-event/controller")(dot)
 First create your controller composer:
 
 ```js
-export default function(dot) {
+module.exports = function(dot) {
   dot.controller("myController", myController)
 }
 
@@ -34,7 +34,7 @@ async function myController() {
 Then use it:
 
 ```js
-require("./myController").default(dot)
+require("./myController")(dot)
 dot.myController()
 ```
 
