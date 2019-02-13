@@ -11,8 +11,7 @@ module.exports = function(dot, opts) {
   state.controller = opts || {}
 
   if (state.log) {
-    state.log.levels.controller = state.log.levels
-      .controller || {
+    state.log.controller = state.log.controller || {
       info: "debug",
     }
   }
