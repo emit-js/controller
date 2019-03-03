@@ -1,11 +1,11 @@
 /* eslint-env jest */
 
-var dot = require("dot-event")()
-var log = require("@dot-event/log")
-var controller = require("./")
+var controller = require("./"),
+  dot,
+  log = require("@dot-event/log")
 
 beforeEach(function() {
-  dot.reset()
+  dot = require("dot-event")()
   log(dot)
   controller(dot)
 })
