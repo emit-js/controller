@@ -10,11 +10,7 @@ module.exports = function(dot, opts) {
 
   state.controller = opts || {}
 
-  if (state.log) {
-    state.log.controller = state.log.controller || {
-      info: "debug",
-    }
-  }
+  dot("logLevel", "controller", { info: "debug" })
 
   dot.any("controller", controller)
 }
