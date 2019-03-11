@@ -1,14 +1,10 @@
 /*prettier-ignore*/
 "use strict"
 
-module.exports = function(dot, opts) {
-  var state = dot.state
-
-  if (state.controller) {
+module.exports = function(dot) {
+  if (dot.controller) {
     return
   }
-
-  state.controller = opts || {}
 
   dot("logLevel", "controller", { info: "debug" })
 
