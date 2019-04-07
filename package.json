@@ -3,7 +3,7 @@
   "version": "0.0.17",
   "description": "emit controllers",
   "keywords": [
-    "@emit-js/emit",
+    "emit",
     "controller"
   ],
   "author": "emit <emit@emit-js.com>",
