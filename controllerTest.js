@@ -1,19 +1,19 @@
 /* eslint-env jest */
 
 var controller = require("./"),
-  dot,
-  log = require("@dot-event/log")
+  emit,
+  log = require("@emit-js/log")
 
 beforeEach(function() {
-  dot = require("dot-event")()
-  log(dot)
-  controller(dot)
+  emit = require("@emit-js/emit")()
+  log(emit)
+  controller(emit)
 })
 
 test("adds prefix prop", function() {
   expect.assertions(1)
-  dot.controller("testController", function(p) {
+  emit.controller("testController", function(a, p) {
     expect(p).toEqual(["test"])
   })
-  return dot.testController()
+  return emit.testController()
 })

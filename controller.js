@@ -1,19 +1,19 @@
 /*prettier-ignore*/
 "use strict"
 
-module.exports = function(dot) {
-  if (dot.controller) {
+module.exports = function(emit) {
+  if (emit.controller) {
     return
   }
 
-  dot("logLevel", "controller", { info: "debug" })
+  emit("logLevel", "controller", { info: "debug" })
 
-  dot.any("controller", controller)
+  emit.any("controller", controller)
 }
 
-function controller(prop, arg, dot) {
-  dot.any(prop[0], function(p, a, d, e, s) {
-    p = p.concat([e.replace(/[A-Z][a-z]*$/, "")])
-    return arg.call(null, p, a, d, e, s)
+function controller(arg, prop, emit) {
+  emit.any(prop[0], function(a, p, e, s) {
+    p = p.concat([s.event.replace(/[A-Z][a-z]*$/, "")])
+    return arg.call(null, a, p, e, s)
   })
 }

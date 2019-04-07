@@ -1,20 +1,20 @@
-# @dot-event/controller
+# @emit-js/controller
 
-[dot-event](https://github.com/dot-event/dot-event#readme) dom controllers
+[emit](https://github.com/emit-js/emit#readme) dom controllers
 
 ![controller](controller.gif)
 
 ## Install
 
 ```bash
-npm install dot-event @dot-event/controller
+npm install @emit-js/emit @emit-js/controller
 ```
 
 ## Setup
 
 ```js
-const dot = require("dot-event")()
-require("@dot-event/controller")(dot)
+const emit = require("@emit-js/emit")()
+require("@emit-js/controller")(emit)
 ```
 
 ## Usage
@@ -22,8 +22,8 @@ require("@dot-event/controller")(dot)
 First create your controller composer:
 
 ```js
-module.exports = function(dot) {
-  dot.controller("myController", myController)
+module.exports = function(emit) {
+  emit.controller("myController", myController)
 }
 
 async function myController() {
@@ -34,24 +34,24 @@ async function myController() {
 Then use it:
 
 ```js
-require("./myController")(dot)
-dot.myController()
+require("./myController")(emit)
+emit.myController()
 ```
 
 ## Props
 
-Commonly we append the controller name to [the `prop` array](https://github.com/dot-event/dot-event#props) and pass the concatenated props to sub-events.
+Commonly we append the controller name to [the `prop` array](https://github.com/emit-js/emit#props) and pass the concatenated props to sub-events.
 
-Passing those props down produces descriptive element ids and [logs](https://github.com/dot-event/log) that describe the call stack.
+Passing those props down produces descriptive element ids and [logs](https://github.com/emit-js/log) that describe the call stack.
 
-Luckily, the `controller` composer injects the controller name into [the `prop` array](https://github.com/dot-event/dot-event#props) automatically, eliminating the controller name append step.
+Luckily, the `controller` composer injects the controller name into [the `prop` array](https://github.com/emit-js/emit#props) automatically, eliminating the controller name append step.
 
 > ℹ️ Prop injection is the only thing the controller composer does at this point in time.
 
 ## Related composers
 
-| Library | Description        | URL                                        |
-| ------- | ------------------ | ------------------------------------------ |
-| el      | DOM elements       | https://github.com/dot-event/el#readme     |
-| render  | Server side render | https://github.com/dot-event/render#readme |
-| view    | DOM views          | https://github.com/dot-event/view#readme   |
+| Library | Description        | URL                                      |
+| ------- | ------------------ | ---------------------------------------- |
+| el      | DOM elements       | https://github.com/emit-js/el#readme     |
+| render  | Server side render | https://github.com/emit-js/render#readme |
+| view    | DOM views          | https://github.com/emit-js/view#readme   |
